@@ -104,13 +104,13 @@ var DoExecute = function()
 		Txt = Msg = ctx = canvas = null;
 		Module.canvas.focus();
 	};
-	setTimeout(function() { Module.run(['undefined']); }, 50);
+	setTimeout(function() { Module.run(['/p']); }, 50);
 };
 var DoLoad = function()
 {
 	Msg(TXT.LOAD);
 	var xhr = new XMLHttpRequest();
-	xhr.open('GET', 'OrbitRhythm.js');
+	xhr.open('GET', 'index.js');
 	xhr.onprogress = function(e)
 	{
 		if (!e.lengthComputable || ctx.pCnt++ < 5) return;
